@@ -25,13 +25,15 @@ export class LoginPageComponents{
         await expect(this.loginButton).toBeVisible();
     }
 
-    async FillValidCredentials(libraryData) {
-        await this.userfield.fill(libraryData.email);
-        await this.passwordField.fill(libraryData.password);
+    async FillValidCredentials(email: string, password: string) {
+        await this.userfield.fill(email);
+        await this.passwordField.fill(password);
     }
 
     async ClickLoginButton() {
         await this.loginButton.click();
     }
+
+    
 
 }
