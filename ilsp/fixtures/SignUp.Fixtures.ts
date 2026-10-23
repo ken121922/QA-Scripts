@@ -1,4 +1,4 @@
-import { test as base, expect } from '../fixtures/Utils.fixtures';
+import { test as base, expect } from './Utils.fixtures';
 import { SignUpComponents } from '../components/SignUp.Components';
 
 type Fixtures = {
@@ -14,4 +14,4 @@ export const test = base.extend<Fixtures>({
 
 export { expect } from '@playwright/test';
 export { SignUpNames } from '../data/SignUp_Module';
-export { credentials } from '../fixtures/Utils.fixtures';
+export { credentials } from './Utils.fixtures';
