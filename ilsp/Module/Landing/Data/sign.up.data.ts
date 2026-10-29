@@ -26,11 +26,30 @@ export const validInternalData: {
   password: string;
   designation: string;
 } = {
-  unitName: 'Angat Buhay Foundation',
-  acronym: 'ABF',
-  staffCount: '9',
-  officerName: 'Luis Montenegro',
-  officerEmail: 'luis@yopmail.com',
+  unitName: 'Center for Information Systems Development and Innovation',
+  acronym: 'CISDI',
+  staffCount: '11',
+  officerName: 'Maria Victoria Santos',
+  officerEmail: 'maria.santos@yopmail.com',
+  password: 'Password123!',
+  designation: 'Admin'
+}
+
+
+export const validInternalPartnerData: {
+  unitName: string;
+  acronym: string;
+  staffCount: string;
+  officerName: string;
+  officerEmail: string;
+  password: string;
+  designation: string;
+} = {
+  unitName: 'Research and Development Office',
+  acronym: 'RDO',
+  staffCount: '8',
+  officerName: 'Tori Vega',
+  officerEmail: 'tori@yopmail.com',
   password: 'Password123!',
   designation: 'Admin'
 }

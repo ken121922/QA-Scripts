@@ -1,5 +1,5 @@
-import { test, credentials } from '../../fixtures/SignUp.Fixtures';
-import { validSignUpData, validInternalData } from '../../data/SignUpData';
+import { test, credentials } from '../Fixtures/sign.up.fixtures';
+import { validSignUpData, validInternalData, validInternalPartnerData } from '../Data/sign.up.data';
 
 
 
@@ -20,6 +20,10 @@ test.describe('Sign Up Form', () => {
     test('Verify if partner can able to submit registration form as internal' , async ({ signUpComponents}) => {
         await signUpComponents.goToInternalForm();
         await signUpComponents.fillInternalForm(validInternalData);
+        await signUpComponents.createUnit();
+        await signUpComponents.successfullyCreatedInternalUnit();
+        await signUpComponents.goToInternalForm();
+        await signUpComponents.fillInternalForm(validInternalPartnerData);
         await signUpComponents.createUnit();
         await signUpComponents.successfullyCreatedInternalUnit();
     })

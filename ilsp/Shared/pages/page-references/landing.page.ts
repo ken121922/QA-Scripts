@@ -1,5 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
-import { LandingPageComponents } from '../../components/LandingPage.Components';
+import { LandingPageComponents } from '../../../Module/Landing/Component/landing.components';
 
 export class LandingPage {
     readonly landingpage: LandingPageComponents;

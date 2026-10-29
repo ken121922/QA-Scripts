@@ -19,6 +19,6 @@ export const test = base.extend<Fixtures>({
 });
 
 export { expect } from '@playwright/test';
-export { LandingPageComponents } from '../components/LandingPage.Components';
-export { LoginPageComponents } from '../components/LoginPage.Components';
+export { LandingPageComponents } from '../../Module/Landing/Component/LandingPage.Components';
+export { LoginPageComponents } from '../../Shared/components/LoginPage.Components';
 export { credentials } from './utils.fixtures'; 

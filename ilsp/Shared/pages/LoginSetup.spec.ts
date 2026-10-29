@@ -1,4 +1,4 @@
-import { test as setup, expect, credentials } from '../../fixtures/LoginFixtures';
+import { test as setup, expect, credentials } from '../../Shared/fixtures/LoginFixtures';
 
 setup.describe('LoginPage', () => {
     let baseUrl = credentials.baseUrl

@@ -1,6 +1,6 @@
 import { expect, Locator, Page } from '@playwright/test';
 
-export class SignUpComponents {
+export class SignUpPage {
     readonly signUpForm: Locator;
     readonly organizationName: Locator;
     readonly acronym: Locator;
@@ -128,7 +128,3 @@ export class SignUpComponents {
         await expect(this.internalOrgSuccessCreated).toBeVisible();
     }
 }
-
-// await page.getByRole('button', { name: 'Create Unit' }).click();
-// await page.getByRole('listitem').filter({ hasText: 'SuccessUnit has been' }).click();
-// await page.getByText('Unit has been submitted for approval successfully', { exact: true }).click();
