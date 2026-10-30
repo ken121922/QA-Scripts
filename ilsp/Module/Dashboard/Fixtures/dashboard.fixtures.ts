@@ -1,5 +1,5 @@
 import { test as base, expect } from '../../../Shared/fixtures/Utils.fixtures';
-import { DashboardPage } from '../Component/dashboard.page.component';
+import { DashboardPage } from '../Component/view.components';
 
 type Fixtures = {
     dashboardPage: DashboardPage;

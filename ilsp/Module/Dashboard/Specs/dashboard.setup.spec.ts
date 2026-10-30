@@ -1,4 +1,4 @@
-import { test, credentials } from '../Fixtures/Dashboard.Fixtures';
+import { test, credentials } from '../Fixtures/dashboard.fixtures';
 
 
 test.describe('Dashboard', () => {
