@@ -12,6 +12,8 @@ export class HeaderComponents {
     readonly recordActions: Locator;
     readonly workflowDistribution: Locator;
     readonly needAnytime: Locator;
+    readonly orgSubmodule: Locator;
+    readonly protocolWorkflowType: Locator;
     readonly finishBtn: Locator;
     readonly cancelBtn: Locator;
 
@@ -27,8 +29,20 @@ export class HeaderComponents {
         this.fullscreen = page.getByRole('button').nth(3);
         this.accessbility = page.locator('.flex.items-center.h-5');
         this.needAnytime = page.getByText('Need Help Anytime?');
+        this.orgSubmodule = page.getByText('Organization Submodules');
+        this.protocolWorkflowType = page.getByText('Protocol Workflow Type');
         this.finishBtn = page.getByRole('button', { name: 'Finish' });
         this.cancelBtn = page.getByRole('button', { name: 'Close' });
+    }
+
+    async validateOrgSubmodule() {
+        await expect(this.orgSubmodule).toBeVisible();
+        await this.cancelBtn.click();
+    }
+
+    async validateProtocolWorkflowType() {
+        await expect(this.protocolWorkflowType).toBeVisible();
+        await this.cancelBtn.click();
     }
 
     async validateHeader() {

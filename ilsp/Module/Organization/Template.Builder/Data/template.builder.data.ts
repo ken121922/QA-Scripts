@@ -1,4 +1,5 @@
 export const specialProjectData: {
+    projectProposal: string;
     technicalVetting: string;
     budgetApproval: string;
     moaDrafting: string;
@@ -8,6 +9,7 @@ export const specialProjectData: {
     impactAssessment: string;
     archived: string;
 } = {
+    projectProposal: 'Initation of Partnership',
     technicalVetting: 'Project Title',
     budgetApproval: 'Endorsement',
     moaDrafting: 'Internal Review',

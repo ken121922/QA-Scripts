@@ -20,6 +20,7 @@ export class TemplateBuilderPage {
         this.addBtn = page.getByRole('button', { name: 'Add' });
 
         this.radiosSpecialProject = {
+            projectProposal: page.getByRole('radio', { name: 'Project Proposal' }),
             technicalVetting: page.getByRole('radio', { name: 'Technical Vetting' }),
             budgetApproval: page.getByRole('radio', { name: 'Budget Approval' }),
             moaDrafting: page.getByRole('radio', { name: 'MOA Drafting' }),
@@ -34,13 +35,15 @@ export class TemplateBuilderPage {
             initiationOfPartnership: page.getByRole('radio', { name: 'Initiation of Partnership' }),
             submissionOfDocuments: page.getByRole('radio', { name: 'Submission of Documents' }),
             coordinationAndFacilitation: page.getByRole('radio', { name: 'Coordination and Facilitation' }),
+            legalReview: page.getByRole('radio', { name: 'Legal Review' }),
             finalizationOfTheAgreement: page.getByRole('radio', { name: 'Finalization of the Agreement' }),
             approvalAndSigningOfAgreement: page.getByRole('radio', { name: 'Approval and Signing of' }),
-            documentationAndFiling: page.getByRole('radio', { name: 'Implementation and Monitoring' }),
+            documentationAndFiling: page.getByRole('radio', { name: 'Documentation and Filing' }),
             implementationAndMonitoring: page.getByRole('radio', { name: 'Implementation and Monitoring' }),
             consolidationAndEndorsement: page.getByRole('radio', { name: 'Consolidation and Endorsement' }),
         };
     }
+
 
     async goToWorkflowTab() {
         await this.workflowTab.click();
@@ -95,6 +98,7 @@ export class TemplateBuilderPage {
 
     async validateSpecialProtocolStages() {
         const specialProtocolStages = [
+            this.radiosSpecialProject.projectProposal,
             this.radiosSpecialProject.technicalVetting,
             this.radiosSpecialProject.budgetApproval,
             this.radiosSpecialProject.moaDrafting,
@@ -112,6 +116,7 @@ export class TemplateBuilderPage {
 
     async addNewRequirementSpecialProject(
         data: {
+            projectProposal: string;
             technicalVetting: string;
             budgetApproval: string;
             moaDrafting: string;
@@ -131,6 +136,4 @@ export class TemplateBuilderPage {
             }
         }
     }
-
-
 }

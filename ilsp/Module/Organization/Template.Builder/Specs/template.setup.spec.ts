@@ -9,11 +9,23 @@ test.describe('Template Builder', () => {
         await sideBarComponents.goToOrganization();
     });
 
-    test('Verify if user can create requirement in linkage', async ({ templateBuilderPage, validateTemplateBuilder }) => {
+    test('Verify if user can create requirement in linkage', async ({ templateBuilderPage, validateTemplateBuilder, headerComponents }) => {
+        await headerComponents.validateOrgSubmodule();
         await templateBuilderPage.goToWorkflowTab();
+        await headerComponents.validateProtocolWorkflowType();
         await templateBuilderPage.validateLinkageProtocolStages();
         await templateBuilderPage.addNewRequirementLinkages(linkageData);
         await validateTemplateBuilder.validateCreatedRequirements(linkageData);
     }) ;
 
-})
+    test('Verify if user can create requirement in special project', async ({ templateBuilderPage, validateTemplateBuilder, headerComponents }) => {
+        await headerComponents.validateOrgSubmodule();
+        await templateBuilderPage.goToWorkflowTab();
+        await headerComponents.validateProtocolWorkflowType();
+        await templateBuilderPage.selectSpecialProject();
+        await templateBuilderPage.validateSpecialProtocolStages();
+        await templateBuilderPage.addNewRequirementSpecialProject(specialProjectData);
+        await validateTemplateBuilder.validateCreatedRequirementsSpecialProject(specialProjectData);
+    });
+
+});
